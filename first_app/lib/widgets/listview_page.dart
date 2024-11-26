@@ -19,8 +19,14 @@ class ListviewPage extends StatelessWidget {
             ),
             title: Text(isimler[index]),
             subtitle: Text("Kullanıcı"),
+            trailing: Icon(Icons.arrow_forward),
+            onTap: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(content: Text('${isimler[index]} seçildi')),
+              );
+            },
           );
-        }
+        },
       ),
     );
   }

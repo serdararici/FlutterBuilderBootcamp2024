@@ -51,6 +51,8 @@ class TextPage extends StatelessWidget {
                 fontSize: 16,
                 fontStyle: FontStyle.italic,
                 decoration: TextDecoration.underline,
+                decorationColor: Colors.red,
+                decorationStyle: TextDecorationStyle.dotted,
               ),
             ),
           ],
