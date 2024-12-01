@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:yolcu/pages/account_page.dart';
 import 'package:yolcu/pages/campaigns_page.dart';
+import 'package:yolcu/pages/more_tab.dart';
 import 'package:yolcu/pages/search_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -15,6 +17,8 @@ class _HomePagesState extends State<HomePage> {
   final List<Widget> _tabs = [
     SearchTab(), // Ara sekmesi
     CampaignTab(),  //Kampanyalar sekmesi
+    AccountTab(), // Hesabım sayfası
+    MoreTab(), //  Diğer Sayfası
   ];
 
   void _onItemTapped(int index) {
@@ -43,6 +47,14 @@ class _HomePagesState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.local_offer),
             label: 'Kampanyalar',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Hesabım',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.more_horiz),
+            label: 'Diğer',
           ),
         ],
       ),
